@@ -27,6 +27,29 @@ public class Start {
 
             statement.executeUpdate(queryCreate);
             System.out.println("Query eseguita correttamente: creata tabella 'students'");
+
+            //insert students
+            String varname1 = ""
+                    + "INSERT INTO `newdb`.`students` (`last_name`, `first_name`) VALUES ('Consiglio', 'Francesco');";
+
+
+            String varname11 = ""
+                    + "INSERT INTO `newdb`.`students` (`last_name`, `first_name`) VALUES ('Ceriello', 'Vincenzo');";
+
+
+            String varname12 = ""
+                    + "INSERT INTO `newdb`.`students` (`last_name`, `first_name`) VALUES ('Falanga', 'Antonio');";
+
+
+            String varname13 = ""
+                    + "INSERT INTO `newdb`.`students` (`last_name`, `first_name`) VALUES ('Reale', 'Alessandro');";
+
+            statement.executeUpdate(varname1);
+            statement.executeUpdate(varname11);
+            statement.executeUpdate(varname12);
+            statement.executeUpdate(varname13);
+            System.out.println("Query eseguita correttamente: inseriti studenti nella tabella 'students'");
+
             statement.close();
 
         } catch(SQLException e) {
